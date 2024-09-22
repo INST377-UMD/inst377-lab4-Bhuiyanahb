@@ -1,0 +1,59 @@
+body {
+    background-color: #ece90a; /* yellow background */
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    text-align: left;
+    font-weight: bold;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section {
+    background-color: #2e383a; /* gray background for sections */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    border: 2px solid white;
+    width: 500px; /* Same width for all sections */
+}
+
+.section label {
+    color: white;
+    margin-right: 10px;
+}
+
+.section input {
+    padding: 5px;
+    margin-right: 10px;
+    width: 150px; /* Ensure input field is the same width */
+}
+
+.section button {
+    padding: 5px 10px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 150px; /* Same width for all buttons */
+}
+
+.section button:hover {
+    background-color: #f0f0f0;
+}

@@ -1,0 +1,71 @@
+<html>
+    <head>
+
+        <title>INST377 - Lab 4</title>
+        <link rel="stylesheet" href="lab04.css">
+    </head>
+    <body>
+        <h1 id="mainHeading">INST377 - Lab 4</h1>
+    
+    <div class="container">
+        <!-- Left Column (Name and Text Tester) -->
+        <div class="column">
+            <div class="section">
+                <label for="nameInput">Name:</label>
+                <input type="text" id="nameInput" name="name" required>
+                <button type="button" onclick="alertMe()">Alert Me!</button>
+            </div>
+            
+            <div class="section">
+                <label for="textInput">Text Tester:</label>
+                <input type="text" id="textInput" name="text">
+                <button type="button" onclick="validateText()">Validate Text</button>
+            </div>
+        </div>
+
+        <!-- Right Column (Change Color and Add Text) -->
+        <div class="column">
+            <div class="section">
+                <button onclick="changeColor()">Change Color</button>
+            </div>
+            
+            <div class="section">
+                <button onclick="addText()">Add Text</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Section -->
+    <script>
+        function alertMe() {
+            let name = document.getElementById("nameInput").value;
+            if (name) {
+                alert("Hi " + name + "!");
+            }
+        }
+
+        function changeColor() {
+            let body = document.body;
+            body.style.backgroundColor = body.style.backgroundColor === 'yellow' ? 'green' : 'yellow';
+        }
+
+        function validateText() {
+            let text = document.getElementById("textInput").value;
+            let validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+          
+            if (validation.test(text)) {
+                alert("Special character found!");
+            } else {
+                alert("Text is valid!");
+            }
+        }
+
+        function addText() {
+            let heading = document.getElementById("mainHeading");
+            heading.innerHTML += " Add Text";
+        }
+    </script>
+
+
+    </body>
+</html>
